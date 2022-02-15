@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'airtableGenerator'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0FD15BB0591D43EDBA885FA549E0F4E3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B035B936C9004EA7B2031C5F031ADF5E }}
           package: .
