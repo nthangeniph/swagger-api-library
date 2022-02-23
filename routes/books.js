@@ -116,20 +116,20 @@ router.get("/:id", (req, res) => {
 //  *         description: Some server error
 //  */
 
-// router.post("/", (req, res) => {
-//   try {
-//     const book = {
-//       id: nanoid(idLength),
-//       ...req.body,
-//     };
+router.post("/", (req, res) => {
+  try {
+    const book = {
+      id: nanoid(idLength),
+      ...req.body,
+    };
 
-//     req.app.db.get("books").push(book).write();
+    req.app.db.get("books").push(book).write();
 
-//     res.send(book);
-//   } catch (error) {
-//     return res.status(500).send(error);
-//   }
-// });
+    res.send(book);
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+});
 
 // /**
 //  * @swagger
@@ -163,15 +163,15 @@ router.get("/:id", (req, res) => {
 //  *        description: Some error happened
 //  */
 
-// router.put("/:id", (req, res) => {
-//   try {
-//     req.app.db.get("books").find({ id: req.params.id }).assign(req.body).write();
+router.put("/:id", (req, res) => {
+  try {
+    req.app.db.get("books").find({ id: req.params.id }).assign(req.body).write();
 
-//     res.send(req.app.db.get("books").find({ id: req.params.id }));
-//   } catch (error) {
-//     return res.status(500).send(error);
-//   }
-// });
+    res.send(req.app.db.get("books").find({ id: req.params.id }));
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+});
 
 // /**
 //  * @swagger
@@ -194,10 +194,10 @@ router.get("/:id", (req, res) => {
 //  *         description: The book was not found
 //  */
 
-// router.delete("/:id", (req, res) => {
-// 	req.app.db.get("books").remove({ id: req.params.id }).write();
+router.delete("/:id", (req, res) => {
+  req.app.db.get("books").remove({ id: req.params.id }).write();
 
-// 	res.sendStatus(200);
-// });
+  res.sendStatus(200);
+});
 
 module.exports = router;
