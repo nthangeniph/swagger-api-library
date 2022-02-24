@@ -29,5 +29,8 @@
     "url": "https://github.com/nthangeniph/swagger-api-library/issues"
   },
   "homepage": "https://github.com/nthangeniph/swagger-api-library#readme",
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": ">=5.0.0"
+  }
 }
