@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'Boxfusion-GradsTodoList'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5A8240972AB44FB7B495EA2E300DEFBC }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B739217656754BAF8752F9FB83F237C8 }}
           package: .
