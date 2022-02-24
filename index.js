@@ -17,7 +17,7 @@ const options = {
     },
     servers: [
       {
-        url: "https://airtablegenerator.azurewebsites.net/",
+        url: "https://boxfusion-gradstodolist.azurewebsites.net/",
       },
     ],
   },
