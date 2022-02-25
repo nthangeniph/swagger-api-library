@@ -5,7 +5,11 @@ const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
 const todosRouter = require("./routes/apis");
 
-const PORT = process.env.PORT || 4000;
+require("dotenv").config();
+
+//const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT;
+const HOST = process.env.HOST;
 
 const options = {
   definition: {
@@ -17,7 +21,7 @@ const options = {
     },
     servers: [
       {
-        url: "https://todolistgradstracker.azurewebsites.net/",
+        url: `${HOST}:${PORT}/`,
       },
     ],
   },
