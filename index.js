@@ -8,8 +8,8 @@ const todosRouter = require("./routes/apis");
 require("dotenv").config();
 
 //const PORT = process.env.PORT || 80;
-const PORT = process.env.PORT;
-const HOST = process.env.HOST;
+const PORT = process.env.PORT || 443;
+const HOST = process.env.HOST || "https://todolistgradstracker.azurewebsites.net";
 
 const options = {
   definition: {
